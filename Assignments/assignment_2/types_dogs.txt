@@ -1,0 +1,21 @@
+dog
+schnauzer
+labrador poodle pug
+mutt -e pug
+pug
+etriever
+pug
+
+retriever
+pug
+etriever
+cocker
+brittany
+golden
+
+cocker
+brittany
+golden
+cat
+mice
+parrot
