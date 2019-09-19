@@ -39,8 +39,9 @@ Kbet <- DNA$
   
 #Quesiton 5
   
-  Down <- DNA[DNA$Lab == "Downstairs",]
-  
+  Down <- DNA[DNA$Lab %in% c(Downstairs),]
+Year <- DNA[DNA$Year_Collected >= "2004",]
+    
   
 jpeg("../Data_Course_Ashworth/Class notes in R/testimage.jpg") #send everything after this line to a file and does not close until dev.off is seen####
 #it is like opening a door and does not close until dev.off####
