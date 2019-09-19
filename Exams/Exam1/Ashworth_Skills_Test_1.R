@@ -22,9 +22,12 @@ Ben_plot<-plot(DNA$Year_Collected,DNA$DNA_Concentration_Ben, xlab = "YEAR", ylab
 
 
 #question 3
-jpeg("Ashworth_Plot2.jpg")
-plot(Katy_plot, main = "Katy's Extractions", xlab = "YEAR", ylab = "DNA Extractions")
+jpeg("Ashworth_Plot4.jpg")
+plot(DNA$Year_Collected,DNA$DNA_Concentration_Katy, xlab = "YEAR", ylab = "DNA Extractions", main = "Katy's Extractions")
+
 dev.off()
+
+plot(Katy_plot, main = "Katy's Extractions", xlab = "YEAR", ylab = "DNA Extractions")
 
 jpeg("Ashworth_Plot3.jpg")
 plot(Ben_plot, main = "Ben's Extractions", xlab = "YEAR", ylab = "DNA Extractions")
@@ -39,11 +42,15 @@ Kbet <- DNA$
   
 #Quesiton 5
   
-  Down <- DNA[DNA$Lab %in% c(Downstairs),]
-Year <- DNA[DNA$Year_Collected >= "2004",]
-    
+ 
+
+Down <- DNA[DNA$Lab == "Downstairs",]
+
+ plot(Down$Year_Collected,Down$DNA_Concentration_Ben)   
   
-jpeg("../Data_Course_Ashworth/Class notes in R/testimage.jpg") #send everything after this line to a file and does not close until dev.off is seen####
+#HELP NOTES
+ 
+ jpeg("../Data_Course_Ashworth/Class notes in R/testimage.jpg") #send everything after this line to a file and does not close until dev.off is seen####
 #it is like opening a door and does not close until dev.off####
 plot(nums, main = "My Title", xlab = "My axis label", ylab = "My other axis label")
 dev.off()
